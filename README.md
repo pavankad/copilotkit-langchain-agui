@@ -127,3 +127,4 @@ Check out the [Contributing guide](https://github.com/ag-ui-protocol/ag-ui/blob/
 ## License
 
 AG-UI is open source and available under the MIT License.
+# copilotkit-langchain-agui
