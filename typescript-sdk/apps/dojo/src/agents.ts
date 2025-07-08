@@ -10,6 +10,8 @@ import { LangGraphAgent } from "@ag-ui/langgraph";
 import { AgnoAgent } from "@ag-ui/agno";
 import { LlamaIndexAgent } from "@ag-ui/llamaindex";
 import { CrewAIAgent } from "@ag-ui/crewai";
+import { OpenAIServerAgent } from "@ag-ui/openai-server"
+
 
 export const agentsIntegrations: AgentIntegrationConfig[] = [
   {
@@ -26,6 +28,16 @@ export const agentsIntegrations: AgentIntegrationConfig[] = [
       return {
         agentic_chat: new ServerStarterAgent({ url: "http://localhost:8000/" }),
       };
+    },
+  },
+  {
+    id: "openai-server",
+    agents: async () => {
+      return {
+        agentic_chat: new OpenAIServerAgent(
+          {url: "http://localhost:8000/"}
+        ),
+      }
     },
   },
   {
